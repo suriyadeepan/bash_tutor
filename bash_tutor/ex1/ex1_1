@@ -1,0 +1,15 @@
+echo 
+echo -n "Enter your Name: "
+read name
+echo 
+echo -n "Enter Address: "
+read address
+echo
+echo -n "Enter Phone no: "
+read phone
+echo
+echo "Name: $name" > details.out
+echo "Address: $address" >> details.out
+echo "Phone: $phone" >> details.out
+echo Details stored in \"details.out\" 
+echo

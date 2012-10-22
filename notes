@@ -1,0 +1,5 @@
+This file contains simple, general info on
+	working with bash scripts...
+
+* Add executable permission to a script (or any other executable)
+	$ chmod +x script_name

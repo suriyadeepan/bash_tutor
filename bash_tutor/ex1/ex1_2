@@ -1,0 +1,34 @@
+# This program is supposed to store the some info in a file
+#	and the file is supposed to look like below:
+	
+	
+# no of users :
+# no of users logged on:
+# no of processes:
+
+# Hint: ps, who, wc -l 
+
+# Solution:
+# 1. "who" gives who is logged on
+# 2. piping the o/p of "who" to i/p of wc (as wc --lines)
+#	we can find no. of users logged on
+# 3. "ps" lists all the running processes
+#	"ps | wc --lines" gives no. of running processes
+# 4. "cat /etc/passwd" lists all possible users
+# 	it can again be piped to i/p of "wc"
+
+# lets get started!
+
+
+echo -n "No of users : " > usr_info.out
+who | wc --lines >> usr_info.out
+echo >> usr_info.out
+echo -n "No of users logged on: " >> usr_info.out
+cat /etc/passwd | wc --lines >> usr_info.out
+echo >> usr_info.out
+echo -n "No of processes running: " >> usr_info.out
+ps | wc --lines >> usr_info.out
+
+
+echo 
+echo User details stored in \"usr_info.out\"
