@@ -1,15 +1,57 @@
+# This script should get input from user
+# 	and write to a file as follows
+#
+# Name: 
+# Address:
+# Phone: 
+#
+# 	and display a msg like
+#		Details stored in "details.out"
+#
+# Hint: usage of \ before "
+#
+# Solution:
+# 
+# 1. get input from user using "read"
+# 	and hence storing each details 
+#		in a variable like "name"
+# 2. Write the variables to a file
+# 	using ">"(overwrite), ">>"(append) operators
+# 3. Use $var_name for getting the value of variables
+#
+
+
+
 echo 
 echo -n "Enter your Name: "
+# use of "-n" option to avoid new line
+
 read name
+# getting input from user 
+# 	storing it in var "name"
+
 echo 
 echo -n "Enter Address: "
+
 read address
+
 echo
 echo -n "Enter Phone no: "
+
 read phone
+
 echo
 echo "Name: $name" > details.out
+# getting value of var "name" by
+#	using $ symbol and writing
+#		it to a file
+
 echo "Address: $address" >> details.out
+
 echo "Phone: $phone" >> details.out
+
 echo Details stored in \"details.out\" 
+# usage of \ befor " for using 
+#  " as normal charecter and 
+#     not using it special powers
 echo

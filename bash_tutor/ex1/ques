@@ -1,0 +1,10 @@
+ex1_1:
+	Get name, address, phone num. from user
+	store it in a file
+	display a msg - stored in "filename.out"
+
+ex1_2:
+	Write to a file 
+	no of users logged on
+	no of possible users
+	no of running processes

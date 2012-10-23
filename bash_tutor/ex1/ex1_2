@@ -21,14 +21,38 @@
 
 
 echo -n "No of users : " > usr_info.out
+# ">" cretes a new file and adds the o/p of the operation to it
+#	if usr_info.out already exists, it overwrites the file
+# "-n" option cancels the new line at the end of 
+#	"No of users: "
+
 who | wc --lines >> usr_info.out
+# ">>" appends to the file
+# o/p of "who" is piped to i/p of "wc --lines"
+# Enter "man who" or "man wc" in a seperate 
+#	terminal to know more about them (man - manual)
+
 echo >> usr_info.out
+
+
+
 echo -n "No of users logged on: " >> usr_info.out
+
 cat /etc/passwd | wc --lines >> usr_info.out
+# "/etc/passwd" is a file which contains all possible users
+# use "cat /etc/passwd" in a seperate shell 
+#	to kno about the file
+
 echo >> usr_info.out
+
 echo -n "No of processes running: " >> usr_info.out
+
 ps | wc --lines >> usr_info.out
 
 
 echo 
 echo User details stored in \"usr_info.out\"
+# --> \" <-- 
+#  \ is used before " 
+#   for using " as a normal char
+#    not a special char
