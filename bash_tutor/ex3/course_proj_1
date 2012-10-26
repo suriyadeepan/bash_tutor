@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# this program will prompt user to enter
+#	name, address, city, state, zip
+#		saves these as a record
+#		in a file seperated
+#		by :
+# so, one line for  each record (ie) each person
+
+
+# prompt user for details and
+#	store them in variables
+echo
+echo -n "Enter name: "
+read name
+echo -n "Enter Address: "
+read addr
+echo -n "Enter city: "
+read city
+echo -n "Enter State: "
+read state
+echo -n "Enter zip: "
+read zip
+echo
+
+# storing filename in a var
+fname=names.dat
+
+# storing all the variables in a file
+echo "$name:$addr:$city:$state:$zip" >> $fname
+
+# display all the records stored in names.dat
+echo
+echo '********************* List of Records *******************'
+cat $fname
+echo '*********************************************************'
+
+# display count of number of records
+# 	one record per line
+# 	so, no. of records = no. of line
+# we can use "wc" - word count for counting
+#	lines with "--lines" option
+echo
+echo "Num. of records: `more $fname | wc --lines`"
+echo

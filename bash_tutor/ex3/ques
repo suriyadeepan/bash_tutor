@@ -1,0 +1,14 @@
+Specifications for initial phase of course project:
+
+1. The project will prompt the user for five items of data:
+	name, address, city, state, zip
+
+2. This info will be appended to end of text file, all on 
+	one line, seperated by ":" charecter
+
+3. Store the name of text file in a variable name "fname"
+
+4. Display the contents of the file and the num. of records
+	in the file
+
+5. exit
