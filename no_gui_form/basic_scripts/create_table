@@ -1,0 +1,45 @@
+#!/bin/bash
+echo
+echo  '**********************************************'
+echo  '**************Table Creation******************'
+echo  '**********************************************'
+echo
+
+# get from user
+#	table name;
+#	name,datatype of each parameter;
+#
+# Note: table num. of parameters is restricted
+#	to only '2' until i get used to
+#		conditions and loops in bash
+
+echo -n "Enter table name: "
+read table_name
+echo
+echo
+echo "Note: num. of columns currently restricted to 2"
+echo
+echo
+echo -n "Enter parameter1 ( name type ): "
+read param1_name param1_type
+echo -n "Enter parameter2 ( name type ): "
+read param2_name param2_type
+echo
+
+# Displaying the exact query 
+# 	used to create the table
+echo "Query: "
+echo "create table $1($param1_name $param1_type,$param2_name $param2_type)"
+echo
+
+# myql part starts here...
+mysql test<<EOFMYSQL
+
+create table $table_name($param1_name $param1_type,$param2_name $param2_type);
+
+EOFMYSQL
+# mysql part ends here...
+
+echo "Table creation successful!!!"
+echo '*********************************************'
+echo

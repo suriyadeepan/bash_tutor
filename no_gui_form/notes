@@ -1,0 +1,17 @@
+* List databases
+	show databases;
+
+* Choosing Database
+	use db_name;
+
+* List tables
+	show tables;
+
+* Create table
+	create table table_name(var_name1 DATATYPE,var_name2 DATATYPE,....);
+	
+	eg:
+	create table tab1(id int,data varchar(50));
+	
+* Show table structure
+	describe table_name;

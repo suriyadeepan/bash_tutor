@@ -1,0 +1,8 @@
+
+* this folder contains files associated to " Form without GUI "
+
+* i'm trying to create a cmdline FORM 
+	which is connected to mysql
+
+* basically, its a bash script that 
+	communicates with mysql DB
