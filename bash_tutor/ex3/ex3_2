@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# Get directory name as input from user
+# check if its a directory and its writable
+# if so, create a file inside the directory
+# handle empty arguments
+
+# get input from user
+echo
+echo -n "Enter a directory: "
+read dname
+echo
+
+# check if it exists, is a directory and is writable
+if [ -d "$dname" -a -w "$dname" ]
+then
+# now that the directory exists
+# lets go into the directory
+# and create a file "some_file.dat" in it
+	echo "Directory exists and is writable"
+	echo "Creating a file some_file.dat inside $dname"
+	cd $dname
+	touch ./some_file.dat
+else
+# if directory doesn't exist or is not writable
+# we come here and display appropriate msg to user
+	echo "Directory is not accessible"
+
+fi
+# end of script
+
+

@@ -1,0 +1,53 @@
+*  Excercises
+
+1. ex3_1 
+
+	Get age as input from user
+	check if it greater than retirment age
+	if so,
+		display msg "U r done!"
+	else
+		display msg "U r good!"
+	
+	if user pressed enter, without typing an age
+		we need to handle it
+
+2. ex3_2
+
+	a script that reads name of a directory
+	
+	check if its a directory and
+		if it is writable
+	(do these in one line)
+	if true, crete a file inside the directory
+
+	handle empty argument
+
+
+**  Specifications for Course Project PHASE II
+
+	1. present user with a menu of choices
+	
+	2. Choices are
+		1) Create a record
+		2) View records
+		3) Search for records
+		4) Delete records that 
+			match a pattern
+
+	3. Implementing record creation and viewing (1,2)
+		is enough for now
+
+	4. Handling unknown and empty arguments
+
+	5. Display msg "Under construction" to the user
+		when option 3 (or) 4 is selected
+
+	6. When user prompts to view records(2) 
+		before any record is created, no file
+			will exist; we need to handle it
+		
+
+
+
+

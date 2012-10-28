@@ -1,0 +1,54 @@
+#!/bin/bash
+# we need to get age as input from user 
+# and check it with an age of 60 
+# if > 60, display "u r done!"
+# else, display "u r good!"
+
+# store value 60 in a variable
+# notice that there are no spaces
+# no spaces => while assigning values
+age_limit=60
+
+# get input from user
+echo 
+echo -n "Enter your age: "
+read age_input
+echo
+
+# now compare age_input with age_limit
+
+# checking "age_input > age_limit"
+# " > /dev/null " => redirects output of cmd within if 
+#	to /dev/null
+# " 2>&1" => redirects std error (in case error occurs)
+#	of same cmd to /dev/null
+if [ "$age_input" -gt $age_limit -a $age_input -lt 150 ] > /dev/null 2>&1
+then
+	echo
+	echo "u r done!"
+	echo
+
+# if not, check "age_input < age_limit" 
+elif [ "$age_input" -lt $age_limit -a $age_input -gt 0 ] > /dev/null 2>&1
+then
+	echo
+	echo "u r good!"
+	echo
+
+# if not, check "age_iput = age_limit"
+# notice the spaces " = " => comparison
+elif [ "$age_input" = $age_limit ] > /dev/null 2>&1
+then
+	echo
+	echo "u r 60! i'm watchin u!"
+	echo
+
+# if none of the above matches, then
+# there must be some error in the input
+# display error msg to user
+else
+	echo
+	echo "invalid input"
+	echo
+
+fi
