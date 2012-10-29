@@ -1,0 +1,60 @@
+#!/bin/bash
+#
+# In this script, we get a directory as input
+# from the user and list the files in that
+# we do this again and agin
+# we break out of the loop once
+# the no. of files in the directory (ip fom user)
+# is greater than a limit
+
+
+echo
+echo -n "Enter directory name: "
+read dname
+
+
+while [ "$dname" ]
+do
+# find the number of files
+num_files=`ls $dname | wc -l `
+
+if [ ! -d "$dname" ]
+then
+	echo
+	echo "Warning: Directory is not accessible!"
+	echo
+#	getting direc name from user here is really important
+#	if we fail to do so, the previous input (not a directory)
+#	will remain in dname and the loop runs infinitely 
+	echo -n "Enter directory name: "
+	read dname
+	echo
+	continue
+else
+	if [ "$num_files" -lt 7 ]
+	then
+		ls $dname
+		echo
+		echo "No. of files inside $dname : $num_files"
+		echo
+	else
+		echo
+		echo "Too many files!!!"
+		echo
+		break
+	fi
+fi # end of if
+
+echo
+echo -n "Enter directory name: "
+read dname
+echo
+
+
+done
+# end of while
+
+
+
+echo "U entered $key Success!!!!"
+exit

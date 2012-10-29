@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+# i'm trying to test a simple script involving
+# while loop
+#
+# get input from user and
+# test if its equal to "34"
+# if so, exit
+# else get input again and again
+
+echo
+echo -n "Enter key: "
+read key
+
+# checking for inequality
+# returns true if not equal
+while [ ! "$key" = 34 ]
+do
+echo
+echo -n "Wrong! Enter again:"
+read key
+done
+# end of while
+
+
+
+echo "U entered $key Success!!!!"
+exit

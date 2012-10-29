@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# In this script, the user inputs a directory
+# the files in the directory whose names match a
+# particular pattern like a char sequence "foo"
+# consider those files and finally print the 
+# sum of sizes of all such files
+#
+#
+# get input from user
+echo
+echo -n "Enter directory: "
+read dname
+echo
+#
+# change to the directory
+cd dname
+#
+# use a for loop to iterate thro' the directory
+for filex in f
