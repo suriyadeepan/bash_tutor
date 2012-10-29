@@ -1,0 +1,21 @@
+* this chapter is all about looping
+	while
+	break, continue
+	for
+	Numerical Computation
+
+* the folder contain a number *.x files
+	these files are for testing with the
+		script ex4 ( pattern matching )
+
+* test_break, test_while:
+	-> thes files are misc scripts used for
+		testing while loop and break
+	-> open and read the files to kno more
+
+* ex4 => chapter excercise
+
+* course_proj_3 => course project PHASE III
+
+* names.dat => a data file for storing records
+		used by course_proj_3 script

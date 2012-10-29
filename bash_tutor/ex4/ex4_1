@@ -3,18 +3,61 @@
 # In this script, the user inputs a directory
 # the files in the directory whose names match a
 # particular pattern like a char sequence "foo"
-# consider those files and finally print the 
+# consider those files and finally print the
 # sum of sizes of all such files
 #
 #
-# get input from user
+# get input from user - a dirctory 
 echo
 echo -n "Enter directory: "
 read dname
 echo
 #
 # change to the directory
-cd dname
+cd $dname
 #
+# we display the current directory and
+# list the files in current directory
+echo
+echo -n "We are in "
+pwd
+echo
+echo '******************** list of files **********************'
+ls
+echo '*********************************************************'
+echo
+#
+# now we iterated through the list of files, find files that 
+# match patter and display them
+#
+echo '************** list of files with foo *******************'
 # use a for loop to iterate thro' the directory
-for filex in f
+#
+# variable size stores sum of sizes of matching files
+# variable count stores total no. of iterations
+size=0
+count=0
+#
+# iterating through matching files
+for filex in *[f][o][o]*
+do
+# display file
+echo $filex
+# count++
+count=`expr $count + 1`
+# finding size of file in this iteration,
+#	storing in temp
+temp=`more $filex | wc -c`
+# size = temp + size
+size=`expr $temp + $size`
+done
+# end of loop
+#
+# display number of files(count) and
+# sum of sizes of matching files (size)
+echo '*********************************************************'
+echo
+echo "Num of files = $count"
+echo "Total size of files = $size"
+echo
+# end of script

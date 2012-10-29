@@ -1,0 +1,25 @@
+*  Excercise
+
+  ex4_1
+
+	get a directory as input from user
+	
+	iterate through the files in the directory
+	
+	find the files that contain "foo" 
+
+	list those files
+
+	print the sum of sizes of all those files
+	
+
+
+
+**  Specifications for Course Project PHASE III
+
+	1. Display the menu of options again and again
+
+	2. Add quit option to the menu
+
+	3. when user presses quit option
+		quit the program else continue
