@@ -19,7 +19,7 @@
 # the lines in the file names.dat are printed neatly
 # field seperator ":" is replaced by space
 # titles are given for each column like (name, etc,.)
-# records are sorted based on surname 
+# records are sorted based on name
 #
 
 # storing filename in a var
