@@ -1,0 +1,116 @@
+#!/bin/bash
+#
+# this script will provide the user with a menu
+# from which he can select any one of the options below:
+#	1. Create a record
+#	2. View records
+#	3. Search for a record
+# 	4. Delete a record
+# only options 1 and 2 are implemented in this script
+# display msg "Construction work going on"
+#	when option 3 or 4 is selected
+# if user prompts to view records before any record is
+#	created, no file would exist;
+#	we need to handle it
+# we need to also handle empty, unknown arguments(inputs)
+#
+
+# storing filename in a var
+# this file is where the records
+# 	will be stored
+        fname=names.dat
+
+
+# display a menu
+echo
+echo '*********************************************************'
+echo "1. Create a record"
+echo "2. View records"
+echo "3. Search for a record"
+echo "4. Delete a record"
+echo '*********************************************************'
+echo
+read option
+
+case $option in
+
+	1)
+	echo
+	echo '**********************************************************'
+	echo '******************* Record Creation **********************'
+# 	prompt user for details and
+#	store them in variables
+	echo
+	echo -n "Enter name: "
+	read name
+	echo -n "Enter Address: "
+	read addr
+	echo -n "Enter city: "
+	read city
+	echo -n "Enter State: "
+	read state
+	echo -n "Enter zip: "
+	read zip
+	echo
+
+#	storing all the variables in a file
+	echo "$name:$addr:$city:$state:$zip" >> $fname
+	echo
+	echo "The record $name created successfully!!!"
+	echo
+	;;
+
+# ";;" => denotes the end of a case
+
+	2)
+# 	if names.dat file exists,
+# 	display all the records stored in names.dat
+	if [ -f $fname ]
+	then
+		echo
+		echo '********************* List of Records *******************'
+		cat $fname
+		echo '*********************************************************'
+
+# 		display count of number of records
+#	 	one record per line
+# 		so, no. of records = no. of line
+#	 	we can use "wc" - word count for counting
+#		lines with "--lines" option
+		echo
+		echo "Num. of records: `more $fname | wc --lines`"
+		echo
+	else
+#		if names.dat file doesn't exist
+#		display "Sorry! No records available now!"
+		echo
+		echo "Sorry! No records available now!"
+		echo
+		exit
+
+	fi
+# 	end of if
+		;;
+# end of case 2
+
+	3|4)
+	echo "Construction work going on!!";;
+
+# end of cases 3 and 4
+
+
+
+	*)
+# 	This is the default case
+#	this case is considered when all
+# 	other cases fail
+	echo
+	echo "Error: Invalid Input"
+	echo "Exiting script!"
+	exit
+	;;
+# end of default case
+
+esac
+# end of case structure
+

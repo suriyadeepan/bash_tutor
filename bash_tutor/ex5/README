@@ -1,0 +1,19 @@
+* this chapter deals with Text Processing using filters like
+	
+	sed, awk, wc, grep, etc,.
+	
+
+* the folder contain 
+
+	* ".awk" files => these are stand-alone awk scripts
+		=> they are used for organizing text in a file
+			or output of a command like "who"
+			
+	* ex5_1, ex5_2 => chapter excercises
+
+	* course_proj_4 => course project PHASE IV
+
+	* names.dat => a data file for storing records
+		used by course_proj_* scripts
+
+	* ".png" file => screenshot of a script running
