@@ -1,0 +1,32 @@
+*  Excercise
+
+  ex5_1
+
+	find all the occurances of following patterns in 
+		file
+	1. lines starting with M
+	2. Blank lines
+	3. lines with 2 or more a's
+	4. lines with 2 or more digit numbers
+	5. lines with pattern [x,y] 
+		where x,y => numbers
+
+  ex5_2
+
+	display the op of who program as following:
+
+	Username	Month Date Time
+	
+	the records shld be sorted alphabetically
+
+
+
+**  Specifications for Course Project PHASE IV
+
+	1. Lines in names.dat shld be printed out neatly
+
+	2. Replace : by spaces
+
+	3. Give title for each column in names.dat
+
+	4. Sort records using surname
