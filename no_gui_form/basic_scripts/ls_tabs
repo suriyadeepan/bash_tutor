@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# this script shld displays all the tables in the database
+# using the sql cmd "show tables"
+
+
+
+# myql part starts here...
+#
+# store all tables in db in a file
+echo "show tables" | mysql test
+# mysql part ends here...
+
+# display the file
+echo $result
+echo
