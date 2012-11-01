@@ -40,6 +40,13 @@ create table $table_name($param1_name $param1_type,$param2_name $param2_type);
 EOFMYSQL
 # mysql part ends here...
 
+if [ $? ]
+then
 echo "Table creation successful!!!"
 echo '*********************************************'
 echo
+else
+echo "Error occured!!"
+echo
+
+fi

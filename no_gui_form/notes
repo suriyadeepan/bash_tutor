@@ -1,3 +1,7 @@
+* Using mysql query in script:
+
+	$ echo "mysql query" | mysql database_name
+
 * List databases
 	show databases;
 
